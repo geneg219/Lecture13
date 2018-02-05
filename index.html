@@ -12,7 +12,8 @@
       <h1>Filters</h1>
       <div ng-controller='MsgController'>
           {{name}} has a message for you: <br>
-          {{sayMessage()}}
+          {{sayMessage()}}<br>
+          Truth : {{ sayTruthMessage() | truth : 'healthy' : 'cookie' | uppercase }}
           <div>
             <button ng-click="feedYaakov()"> {{btnText}} </button>
             Cost: {{cookieCost | currency : "#" : 4}}
